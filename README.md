@@ -8,7 +8,7 @@
   - アンカータグについて
   - VScode ショートカットについて
 
-- PHP の基礎
+- PHP の基礎 Part1
   - 表示の方法
   - コメントアウト
   - 変数定義
@@ -18,3 +18,7 @@
   - 条件分岐part2(==、===の違い、falsyな値について)
   - emptyとissetについて
   - 条件分岐 確認問題
+
+- PHPの基礎 Part2
+  - 配列と繰り返しpart1(配列要素の表示、for、foreachについて)
+  - 配列と繰り返しpart2(配列要素の指定、array_pop、array_shiftについて)
