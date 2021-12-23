@@ -23,5 +23,3 @@ if ($test < 50 || $absence >= 5) {
 } else {
   echo '秀';
 }
-
-// ==と===の違い
