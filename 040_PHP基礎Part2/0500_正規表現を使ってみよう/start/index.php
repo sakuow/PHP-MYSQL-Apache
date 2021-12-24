@@ -2,9 +2,13 @@
 <!-- 正規表現とは文字列のパターンを表現するための方法 -->
 <?php
 $char = 'aAbd1';
-if(preg_match("/aAa/", $char, $$result)) {
+// 任意の文字列を指定するメソッド preg_match
+// 第一引数に検索したい文字列を指定
+// 第二引数に検索する際に参照する文字列を指定(変数でも可)
+// 第三引数に検索した文字列を代入する変数名を記述する
+if(preg_match("/aAa/", $char, $result)) {
 echo '検索成功';
-print_r($result)
+print_r($result);
 } else {
 echo '検索失敗';
 }
