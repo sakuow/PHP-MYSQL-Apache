@@ -23,3 +23,4 @@
   - 配列と繰り返しpart1(配列要素の表示、for、foreachについて)
   - 配列と繰り返しpart2(配列要素の指定、array_pop、array_shiftについて)
   - 連想配列、unsetによる配列要素の削除について
+  - 正規表現part1
