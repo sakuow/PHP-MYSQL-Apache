@@ -1,4 +1,5 @@
 <?php
+
 /**
  * 理解度チェック（関数とスコープ）
  * 
@@ -26,6 +27,18 @@ $student1 = 'taro';
 $student2 = 'jiro';
 $student3 = 'hanako';
 
+function tenko($student, $is_absent = false)
+{
+  if ($is_absent === false) {
+    echo "{$student}は出席しています。<br>";
+  } else {
+    echo "{$student}は欠席しています。<br>";
+  }
+}
+
+tenko($student2);
+tenko($student3, true);
+
 /**
  * 問２：カウンター関数(counter)
  * 
@@ -41,4 +54,15 @@ $student3 = 'hanako';
  * @return int 合計値 ($num + $step)
  */
 
-$num = 0; 
+$num = 6;
+
+
+function counter($step = 1)
+{
+  global $num;
+  $num += $step;
+  echo $num;
+  return $num;
+}
+
+counter(6);
