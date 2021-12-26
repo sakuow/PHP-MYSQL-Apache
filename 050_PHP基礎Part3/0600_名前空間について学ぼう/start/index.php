@@ -13,4 +13,5 @@ use const lib\TAX_RATE;
 $price = lib\with_tax(1000, 0.08);
 echo $price;
 
+// 名前空間の関数のため、＼を使用し指定する。
 echo lib\TAX_RATE;
