@@ -1,11 +1,13 @@
 <?php
+
 /**
- * クラス内のthis
+ * クラスとStaticメソッド
  */
 class Person
 {
     private $name;
     public $age;
+    public const whereTolive = 'Earth';
 
     function __construct($name, $age)
     {
@@ -13,19 +15,23 @@ class Person
         $this->age = $age;
     }
 
-    function hello() {
+    function hello()
+    {
         echo 'hello, ' . $this->name;
+        echo static::whereTolive;
         return $this;
     }
 
-    function bye() {
-        echo 'bye, ' . $this->name;
-        return $this;
+    static function bye()
+    {
+        echo 'bye';
     }
 }
 
 $bob = new Person('Bob', 18);
-$bob->hello()->bye();
+$bob->hello();
+echo Person::whereTolive;
+// $bob->hello()->bye();
 
 // $tim = new Person('Tim', 32);
 // $tim->hello();
