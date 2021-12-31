@@ -1,28 +1,55 @@
 <?php
+
 /**
  * クラス継承
  */
-class Person
+abstract class Person
 {
-    private $name;
+    protected $name;
     public $age;
-    public const WHERE = 'Earth';
+    public static $WHERE = 'Earth';
 
     function __construct($name, $age)
     {
         $this->name = $name;
         $this->age = $age;
+        echo self::$WHERE;
+        echo static::$WHERE;
     }
 
-    function hello() {
-        echo 'hello, ' . $this->name;
-        return $this;
-    }
+    abstract function hello();
 
-    static function bye() {
+    static function bye()
+    {
         echo 'bye';
     }
 }
 
-$bob = new Person('Bob', 18);
-$bob->hello();
+class Japanese extends Person
+{
+
+    // public static $WHERE = '日本';
+
+    function __construct($name, $age)
+    {
+        parent::__construct($name, $age);
+        // $this->name = $name;
+        // $this->age = '30';
+    }
+
+    function hello()
+    {
+        echo 'こんにちは、' . $this->name;
+        return $this;
+    }
+
+    function jusho()
+    {
+        echo '住所は' . parent::$WHERE . 'です。';
+        return $this;
+    }
+}
+
+$taro = new Japanese('太郎', 18);
+// $taro->hello();
+// $taro->jusho();
