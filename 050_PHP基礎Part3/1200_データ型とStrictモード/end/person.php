@@ -1,4 +1,7 @@
-<?php declare(strict_types=1); 
+<?php
+
+declare(strict_types=1);
+
 namespace animal;
 
 abstract class Person
@@ -15,21 +18,25 @@ abstract class Person
 
     abstract function hello(): self;
 
-    static function bye(): void {
+    static function bye(): void
+    {
         echo 'bye';
     }
 }
 
-class Japanese extends Person {
+class Japanese extends Person
+{
 
     public static string $WHERE = '日本';
-    
-    function hello(): self {
+
+    function hello(): self
+    {
         echo 'こんにちは、' . $this->name;
         return $this;
     }
 
-    function jusho(): self {
+    function jusho(): self
+    {
         echo '住所は' . parent::$WHERE . 'です。';
         return $this;
     }
