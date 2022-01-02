@@ -1,5 +1,5 @@
-<form action="get.php" method="GET">
+<form action="">
     <input type="text" name="username">
-    <input type="text" name="password">
+    <input type="password" name="pwd">
     <input type="submit" value="ボタンを押してね">
 </form>
