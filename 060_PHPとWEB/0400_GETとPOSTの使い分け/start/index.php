@@ -1,4 +1,11 @@
-<?php 
+<?php
+
+/**
+ * GETとPOSTの使い分け
+ * 
+ * - URLは最大2000文字程度までしか設定できない。
+ * - GETではパラメータを含めて共有できる。
+ */
 $students = [
     '1' => [
         'name' => 'taro',
@@ -14,7 +21,7 @@ $students = [
     ],
 ];
 
-$id = $_GET['id'];
+$id = $_GET['id'] ?? 1;
 $student = $students[$id];
 $name = $student['name'];
 $age = $student['age'];
