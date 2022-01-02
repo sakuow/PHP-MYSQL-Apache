@@ -1,6 +1,6 @@
 <div>
-    名前：<?php  ?>
+    名前：<?php echo $_POST['username'] ?>
 </div>
 <div>
-    パスワード：<?php  ?>
+    パスワード：<?php echo $_POST['pwd']  ?>
 </div>
