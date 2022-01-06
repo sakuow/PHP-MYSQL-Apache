@@ -30,6 +30,8 @@
  */
 
 $address = "001-001";
+// 数値を表す際は \d　で代用可能。
+// \d{3}-\d{4}が模範解答となる。
 if (preg_match("/[0-9]{3}-[0-9]{4}/", $address, $result)) {
   echo '正常<br />';
   print_r($result);
@@ -62,18 +64,18 @@ if (preg_match("/^[\w.\-]+@[\w\-]+[\w\.\-]+$/", $email, $result)) {
  * 見出しタグ(h1~h6)の中身のみ取得してみよう。
  */
 
-
-<!DOCTYPE html>
+$html = '<!DOCTYPE html>
 <html>
 <head>
     <title>Document</title>
 </head>
-
 <body>
     <h1>見出し１</h1>
     <h2>見出し２</h2>
     <h3>見出し３</h3>
     <header>ヘッダー</header>
 </body>
-
-</html>
+</html>';
+if (preg_match_all("/<h[1-6]>(.+)<\/h[1-6]>/", $html, $result)) {
+  print_r($result[count($result) - 1]);
+}
