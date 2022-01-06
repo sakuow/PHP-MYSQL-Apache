@@ -29,6 +29,14 @@
  * 124-56789 -> NG
  */
 
+$address = "001-001";
+if (preg_match("/[0-9]{3}-[0-9]{4}/", $address, $result)) {
+  echo '正常<br />';
+  print_r($result);
+} else {
+  echo '郵便番号が不正です<br />';
+}
+
 
 /**
  * Email
@@ -40,8 +48,32 @@
  * example/0.00@ex.co.jp -> NG
  */
 
+$email = 'example/0.00@ex.co.jp';
+if (preg_match("/^[\w.\-]+@[\w\-]+[\w\.\-]+$/", $email, $result)) {
+  echo '正常<br />';
+  print_r($result);
+} else {
+  echo 'emailが不正です。';
+}
+
 
 /**
  * HTML
  * 見出しタグ(h1~h6)の中身のみ取得してみよう。
  */
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>見出し１</h1>
+    <h2>見出し２</h2>
+    <h3>見出し３</h3>
+    <header>ヘッダー</header>
+</body>
+
+</html>
