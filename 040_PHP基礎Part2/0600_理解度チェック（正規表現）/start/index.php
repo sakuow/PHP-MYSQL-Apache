@@ -28,53 +28,20 @@
  * wd3-2132 -> NG
  * 124-56789 -> NG
  */
-$zipcode = '124-56789';
-if (preg_match("/^\d{3}-\d{4}$/", $zipcode, $result)) {
-  echo '正しい郵便番号です。';
-  print_r($result);
-} else {
-  echo '郵便番号が不正です。';
-}
 
 
 /**
  * Email
  * . _ - と半角英数字が可能
- *
+ * 
  * example000@gmail.com -> OK
  * example-0.00@gmail.com -> OK
  * example-0.00@ex.co.jp -> OK
  * example/0.00@ex.co.jp -> NG
  */
 
-$email = 'example-0.00@ex.co.jp';
-if (preg_match("/^[\w.\-]+@[\w\-]+\.[\w\.\-]+$/", $email, $result)) {
-  echo '正しいメールアドレスです。';
-  print_r($result);
-} else {
-  echo 'メールアドレスが不正です。';
-}
-
 
 /**
  * HTML
  * 見出しタグ(h1~h6)の中身のみ取得してみよう。
  */
-
-
-$html = '<!DOCTYPE html>
-<html>
-<head>
-  <title>Document</title>
-</head>
-<body>
-  <h1>見出し1</h1>
-  <h2>見出し2</h2>
-  <h3>見出し3</h3>
-  <header>ヘッダー</header>
-  </body>
-</html>';
-
-if (preg_match_all("/<h[1-6]>(.+)<\/h[1-6]>/", $html, $result)) {
-  print_r($result);
-}

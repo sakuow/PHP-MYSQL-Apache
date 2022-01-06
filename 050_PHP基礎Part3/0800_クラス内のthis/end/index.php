@@ -1,5 +1,4 @@
 <?php
-
 /**
  * クラス内のthis
  */
@@ -14,14 +13,12 @@ class Person
         $this->age = $age;
     }
 
-    function hello()
-    {
+    function hello() {
         echo 'hello, ' . $this->name;
         return $this;
     }
 
-    function bye()
-    {
+    function bye() {
         echo 'bye, ' . $this->name;
         return $this;
     }
