@@ -39,7 +39,7 @@ if (preg_match("/^\d{3}-\d{4}$/", $zipcode, $result)) {
 /**
  * Email
  * . _ - と半角英数字が可能
- * 
+ *
  * example000@gmail.com -> OK
  * example-0.00@gmail.com -> OK
  * example-0.00@ex.co.jp -> OK
@@ -47,7 +47,7 @@ if (preg_match("/^\d{3}-\d{4}$/", $zipcode, $result)) {
  */
 $email = 'example/0.00@ex.co.jp';
 if (preg_match("/^[\w.\-]+@[\w\-]+\.[\w\.\-]+$/", $email, $result)) {
-    echo 'メールが正しいです。';
+    echo '正常なメールです。';
     // print_r($result);
 } else {
     echo 'メールが不正です。';
