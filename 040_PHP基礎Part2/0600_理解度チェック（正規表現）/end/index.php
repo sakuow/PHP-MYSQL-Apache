@@ -21,7 +21,6 @@
 
 /**
  * 郵便番号
- * 
  * 001-0012 -> OK
  * 001-001 -> NG
  * 2.2-3042 -> NG
@@ -39,7 +38,6 @@ if (preg_match("/^\d{3}-\d{4}$/", $zipcode, $result)) {
 /**
  * Email
  * . _ - と半角英数字が可能
- *
  * example000@gmail.com -> OK
  * example-0.00@gmail.com -> OK
  * example-0.00@ex.co.jp -> OK
