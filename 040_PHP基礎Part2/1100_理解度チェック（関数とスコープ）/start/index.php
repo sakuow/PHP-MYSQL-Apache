@@ -1,4 +1,5 @@
 <?php
+
 /**
  * 理解度チェック（関数とスコープ）
  * 
@@ -19,7 +20,7 @@
  * 
  * @param string $student 生徒
  * @param bool $is_absent true:欠席 false:出席
- * @return void 
+ * @return void 戻り値が存在しない意味
  */
 
 $student1 = 'taro';
@@ -41,4 +42,4 @@ $student3 = 'hanako';
  * @return int 合計値 ($num + $step)
  */
 
-$num = 0; 
+$num = 0;
