@@ -23,9 +23,22 @@
  * @return void 戻り値が存在しない意味
  */
 
+//  $変数名　= 値　はデフォルト引数
+function tenko($student, $is_absent = false)
+{
+  if ($is_absent) {
+    echo "{$student}は欠席しています。<br>";
+  } else {
+    echo "{$student}は出席しています。<br />";
+  }
+}
+
 $student1 = 'taro';
 $student2 = 'jiro';
 $student3 = 'hanako';
+tenko($student1);
+tenko($student2, true);
+tenko($student3, false);
 
 /**
  * 問２：カウンター関数(counter)
@@ -43,3 +56,14 @@ $student3 = 'hanako';
  */
 
 $num = 0;
+
+function counter($step = 1)
+{
+  global $num;
+  $num += $step;
+  echo $num;
+  return $num;
+}
+
+counter(2);
+counter(66);
